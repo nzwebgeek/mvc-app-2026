@@ -2,19 +2,21 @@
 
 class HomeController
 {
-    
     // view methods
     public function index()
     {
-        // what ever you want to do before loading the view
-    $data = 
+      $database = Database::getInstance();
+      $conn = $database->getConnection();
+
+    //echo $_SESSION['id'] ?? 'Guest';
+  $data = 
     [
-        "title"=> "Home Page",
+       "title"=> "Home Page",
         "message"=> "Welcome Home"
     ];  
 
-        return render("home/index", $data);
-       //require_once __DIR__ ."/../views/home/index.php";
+        render("home/index", $data, 'layouts/hero_layout');// render view with layout
+        
     }
 
      public function about()
@@ -25,14 +27,10 @@ class HomeController
         "message"=> "Welcome to the About Page of our website"
     ];  
 
-        return render("home/about", $data);
+        render("home/about", $data);
        //require_once __DIR__ ."/../views/home/index.php";
     }
 
-    public function testing()
-    {
-       
-    }
-
+    
 }
 ?>
