@@ -71,3 +71,7 @@ function config($key){
 function sanitize($dirty){
     return htmlspecialchars(strip_tags($dirty ?? ''));
 }
+
+function isLoggedIn(){
+    return isset($_SESSION['id']);
+}

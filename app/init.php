@@ -17,6 +17,7 @@ require_once __DIR__ . '/helpers.php';
         $paths = [
             __DIR__ . '/controllers/',
             __DIR__ . '/models/',
+            __DIR__ . '/middlewares/'
         ];
 
         foreach($paths as $path){

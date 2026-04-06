@@ -31,6 +31,17 @@ class HomeController
        //require_once __DIR__ ."/../views/home/index.php";
     }
 
+    public function contact()
+    {
+    $data = 
+    [
+        "title"=> "Contact Page",
+        "message"=> "Welcome to the Contact Page of our website"
+    ];  
+        render("home/contact", $data);
+    }   
+
+
     
 }
 ?>

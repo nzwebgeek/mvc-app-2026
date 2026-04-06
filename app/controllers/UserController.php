@@ -61,13 +61,22 @@ class UserController
             $_SESSION['id'] = $this->userModel->id;
             $_SESSION['username'] = $this->userModel->username;
             $_SESSION['email'] = $this->userModel->email;
-            redirect('/');
+            redirect('/dashboard');
         }
         else{
             echo "Invalid credentials";
         }
-        
-       
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        $_SESSION = [];
+
+        unset($_SESSION['id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['email']);
+        redirect('/user/login');
     }
 }
 ?>
