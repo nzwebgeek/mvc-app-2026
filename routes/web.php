@@ -7,6 +7,7 @@ $routes = [
     '/user/register'=> 'UserController@showRegisterForm',
    '/user/login'=> 'UserController@showLoginForm',
    '/dashboard'=> 'AdminController@dashboard',
+   '/admin/users/profile'=> 'UserController@showprofile',
 
    ],
 

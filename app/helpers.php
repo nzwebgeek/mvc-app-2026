@@ -73,5 +73,15 @@ function sanitize($dirty){
 }
 
 function isLoggedIn(){
-    return isset($_SESSION['id']);
+    return isset($_SESSION['user_id']);
+}
+
+function getUserFullName(){
+    if(isset($_SESSION['first_name']) && isset($_SESSION['last_name'])) 
+    {
+        return $_SESSION['first_name'] . ' ' . $_SESSION['last_name'];  
+    }
+    else{
+        return $_SESSION['username'];
+    }
 }
