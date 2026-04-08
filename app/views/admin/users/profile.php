@@ -6,20 +6,35 @@
             <div class="card-body box-profile">
                 <div class="text-center">
                     <img class="profile-user-img img-fluid img-circle"
+<<<<<<< HEAD
                          src="<?php echo base_url($profile_image ?? 'dummy-profile.png'); ?>" alt="<?php echo $user->profile_image; ?>"
                          alt="User profile picture">
                 </div>
 
                 <h3 class="profile-username text-center"><?php echo $user->username; ?></h3>
+=======
+                         src="<?php echo base_url($profile_image); ?>" alt="<?php echo $profile_image; ?>"
+                         alt="User profile picture">
+                </div>
+
+                <h3 class="profile-username text-center"><?php echo $username; ?></h3>
+>>>>>>> 97523e888ed86b8efc7b77dbf32580b55a8bcd8a
 
                 <p class="text-muted text-center">Software Engineer</p> <!-- Adjust this if you store roles or titles -->
 
                 <ul class="list-group list-group-unbordered mb-3">
                     <li class="list-group-item">
+<<<<<<< HEAD
                         <b>Username</b> <a class="float-right"><?php echo $user->username; ?></a>
                     </li>
                     <li class="list-group-item">
                         <b>Email</b> <a class="float-right"><?php echo $user->email; ?></a>
+=======
+                        <b>Username</b> <a class="float-right"><?php echo $username; ?></a>
+                    </li>
+                    <li class="list-group-item">
+                        <b>Email</b> <a class="float-right"><?php echo $email; ?></a>
+>>>>>>> 97523e888ed86b8efc7b77dbf32580b55a8bcd8a
                     </li>
                     <li class="list-group-item">
                         <b>Phone</b> <a class="float-right"><?php echo $user->phone ?? ''; ?></a>
@@ -31,7 +46,11 @@
                         <b>Last Name</b> <a class="float-right"><?php echo $user->last_name ?? ''; ?></a>
                     </li>
                     <li class="list-group-item">
+<<<<<<< HEAD
                         <b>Birthday</b> <a class="float-right"><?php echo $user->birthday ?? ''; ?></a>
+=======
+                        <b>Birthday</b> <a class="float-right"><?php echo $user->dateOfBirth ?? ''; ?></a>
+>>>>>>> 97523e888ed86b8efc7b77dbf32580b55a8bcd8a
                     </li>
                     <li class="list-group-item">
                         <b>Organization</b> <a class="float-right"><?php echo $user->organization ?? ''; ?></a>
@@ -46,7 +65,10 @@
         <!-- /.card -->
     </div>
     <!-- /.col -->
+<<<<<<< HEAD
            
+=======
+>>>>>>> 97523e888ed86b8efc7b77dbf32580b55a8bcd8a
 
     <div class="col-md-9">
         <div class="card">
@@ -69,6 +91,7 @@
                 </div>
                 <?php unset($_SESSION['error']); ?>
             <?php endif; ?>
+<<<<<<< HEAD
 
             <?php if (isset($_SESSION['message'])): ?>
                 <div class="alert alert-success">
@@ -76,6 +99,8 @@
                 </div>
                 <?php unset($_SESSION['message']); ?>
             <?php endif; ?>
+=======
+>>>>>>> 97523e888ed86b8efc7b77dbf32580b55a8bcd8a
             <div class="card-body">
                 <div class="tab-content">
                     <!-- Timeline Tab -->
