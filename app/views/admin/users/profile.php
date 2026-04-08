@@ -46,6 +46,7 @@
         <!-- /.card -->
     </div>
     <!-- /.col -->
+           
 
     <div class="col-md-9">
         <div class="card">
@@ -67,6 +68,13 @@
                     <?php echo $_SESSION['error']; ?>
                 </div>
                 <?php unset($_SESSION['error']); ?>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['message'])): ?>
+                <div class="alert alert-success">
+                    <?php echo $_SESSION['message']; ?>
+                </div>
+                <?php unset($_SESSION['message']); ?>
             <?php endif; ?>
             <div class="card-body">
                 <div class="tab-content">
